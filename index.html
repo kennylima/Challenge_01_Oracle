@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decodificador de textos ONE</title>
+  <link rel="stylesheet" href="./styles/style.css">
+<body>
+  <main>
+    <section class="logo">
+      <img src="./images/logo.svg" alt="Logo da aplicação">
+    </section>
+    
+    <section class="input">
+      <textarea
+        model="input"
+        placeholder="Digite o texto"></textarea>
+
+      <div class="information">
+        <img src="images/info.svg" alt="Ícone de informação">
+        <span>Acentos serão ignorados.</span>
+      </div>
+
+      <div class="actions">
+        <button id="codificar">Codificar</button>
+        <button id="decodificar">Decodificar</button>
+      </div>
+    </section>
+
+    <section class="output">
+      <div if="showOutput">
+        <textarea
+          model="output"
+          placeholder="Nenhuma mensagem"></textarea>
+        <button id="copiar">Copiar</button>
+      </div>
+      <div else>
+        <img src="./images/sem_texto.svg" alt="Imagem para mostrar que não tem textos decodificados">
+        <h2>Nenhum texto encontrado</h2>
+        <p>Digite um texto que você gostaria de codificar ou decodificar.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/index.js" type="module"></script>
+</body>
+</html>
